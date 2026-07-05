@@ -26,65 +26,60 @@
       font-size: var(--font-size);
     }
     .app { width: 100%; max-width: 430px; min-height: 100vh; display: flex; flex-direction: column; background: linear-gradient(180deg, var(--bg) 0%, var(--bg-dark) 100%); }
-    .splash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--bg) 0%, var(--bg-dark) 100%); display: flex; align-items: center; justify-content: center; z-index: 9999; transition: opacity 0.5s; }
+    .splash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--bg) 0%, var(--bg-dark) 100%); display: flex; align-items: center; justify-content: center; z-index: 9999; transition: opacity 0.3s; }
     .splash.hidden { opacity: 0; pointer-events: none; }
-    .splash-logo { width: 80px; height: 80px; background: var(--text); border-radius: 22px; display: flex; align-items: center; justify-content: center; font-size: 42px; font-weight: 900; color: var(--bg); animation: pulse 1.5s infinite; }
-    @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.1)} }
-    .password-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--bg) 0%, var(--bg-dark) 100%); display: flex; align-items: center; justify-content: center; z-index: 9998; flex-direction: column; gap: 20px; padding: 30px; }
+    .splash-logo { width: 70px; height: 70px; background: var(--text); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 36px; font-weight: 900; color: var(--bg); }
+    .password-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--bg) 0%, var(--bg-dark) 100%); display: flex; align-items: center; justify-content: center; z-index: 9998; flex-direction: column; gap: 16px; padding: 30px; }
     .password-screen.hidden { display: none; }
-    .password-screen .lock-icon { font-size: 60px; }
-    .password-screen h2 { color: var(--text); font-size: 22px; }
-    .password-screen input { width: 100%; max-width: 280px; padding: 14px; border-radius: 16px; border: 2px solid var(--text); background: rgba(255,255,255,0.2); color: var(--text); font-size: 20px; text-align: center; letter-spacing: 6px; outline: none; -webkit-text-security: disc; }
-    .password-screen .btn { padding: 14px 40px; border-radius: 16px; background: var(--text); color: var(--white); border: none; font-weight: 700; font-size: 18px; cursor: pointer; }
-    .password-screen .hint { color: var(--text-light); font-size: 12px; }
-    .header { padding: 12px 16px 8px; position: sticky; top: 0; z-index: 100; background: rgba(255,140,0,0.95); backdrop-filter: blur(10px); }
+    .password-screen .lock-icon { font-size: 50px; }
+    .password-screen h2 { color: var(--text); font-size: 20px; }
+    .password-screen input { width: 100%; max-width: 260px; padding: 12px; border-radius: 14px; border: 2px solid var(--text); background: rgba(255,255,255,0.2); color: var(--text); font-size: 18px; text-align: center; letter-spacing: 4px; outline: none; -webkit-text-security: disc; }
+    .password-screen .btn { padding: 12px 36px; border-radius: 14px; background: var(--text); color: var(--white); border: none; font-weight: 700; font-size: 16px; cursor: pointer; }
+    .header { padding: 10px 14px 6px; position: sticky; top: 0; z-index: 100; background: rgba(255,140,0,0.95); backdrop-filter: blur(10px); }
     .header-row { display: flex; align-items: center; justify-content: space-between; }
-    .header .logo { display: flex; align-items: center; gap: 8px; }
-    .header .icon-app { width: 36px; height: 36px; background: var(--text); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 900; color: var(--bg); }
-    .header h1 { font-size: 16px; font-weight: 700; color: var(--text); }
-    .icon-btn { width: 32px; height: 32px; border-radius: 8px; background: rgba(91,14,138,0.1); border: none; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--text); }
-    .reminder-banner { background: rgba(91,14,138,0.2); border: 1.5px solid var(--text); border-radius: 12px; padding: 8px 12px; margin: 4px 10px; font-size: 12px; display: flex; align-items: center; justify-content: space-between; animation: fadeIn 0.3s ease; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-    .reminder-banner .reminder-close { background: none; border: none; font-size: 16px; cursor: pointer; color: var(--text); }
-    .main { flex: 1; overflow-y: auto; padding: 6px 10px 65px; }
-    .bottom-nav { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 430px; background: rgba(224,120,0,0.95); backdrop-filter: blur(20px); display: flex; justify-content: space-around; padding: 4px 4px 12px; border-top: 1.5px solid var(--text); z-index: 150; border-radius: 20px 20px 0 0; }
-    .nav-item { display: flex; flex-direction: column; align-items: center; gap: 1px; cursor: pointer; padding: 3px 6px; border-radius: 8px; border: none; background: none; color: var(--text-light); font-size: 9px; font-weight: 500; transition: all 0.2s; }
+    .header .logo { display: flex; align-items: center; gap: 6px; }
+    .header .icon-app { width: 30px; height: 30px; background: var(--text); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 900; color: var(--bg); }
+    .header h1 { font-size: 15px; font-weight: 700; color: var(--text); }
+    .icon-btn { width: 28px; height: 28px; border-radius: 6px; background: rgba(91,14,138,0.1); border: none; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--text); }
+    .main { flex: 1; overflow-y: auto; padding: 4px 8px 55px; }
+    .bottom-nav { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 430px; background: rgba(224,120,0,0.95); backdrop-filter: blur(20px); display: flex; justify-content: space-around; padding: 2px 4px 10px; border-top: 1px solid var(--text); z-index: 150; border-radius: 18px 18px 0 0; }
+    .nav-item { display: flex; flex-direction: column; align-items: center; gap: 0; cursor: pointer; padding: 2px 4px; border-radius: 6px; border: none; background: none; color: var(--text-light); font-size: 8px; font-weight: 500; transition: all 0.15s; }
     .nav-item.active { color: var(--text); background: rgba(91,14,138,0.1); }
-    .nav-item .nav-icon { font-size: 18px; }
+    .nav-item .nav-icon { font-size: 16px; }
     .page { display: none; }
-    .page.active { display: block; animation: fadeIn 0.3s ease; }
-    .card { background: var(--card); border: 1.5px solid var(--card-border); border-radius: 16px; padding: 14px 12px; margin-bottom: 8px; cursor: pointer; transition: all 0.2s; }
-    .card:active { transform: scale(0.98); background: rgba(91,14,138,0.15); }
-    .card-title { font-size: var(--font-size); font-weight: 600; color: var(--text); }
-    .card-desc { font-size: var(--font-size-sm); color: var(--text-light); margin-top: 2px; }
-    .section-title { font-size: 11px; font-weight: 700; color: var(--text); text-transform: uppercase; letter-spacing: 1px; margin: 12px 0 6px; }
-    .btn { padding: 10px; border-radius: 14px; background: var(--text); color: var(--white); border: none; font-weight: 700; font-size: 14px; cursor: pointer; width: 100%; }
-    .btn-sm { padding: 6px 10px; border-radius: 8px; background: var(--text); color: var(--white); border: none; font-weight: 600; cursor: pointer; font-size: 11px; }
-    .toast { position: fixed; bottom: 70px; left: 50%; transform: translateX(-50%); background: var(--text); color: var(--white); padding: 6px 14px; border-radius: 14px; font-size: 11px; z-index: 500; animation: fadeIn 0.3s ease; }
-    .hidden { display: none !important; }
-    .mt-1 { margin-top: 4px; }
-    .text-center { text-align: center; }
-    .text-light { color: var(--text-light); font-size: 11px; }
-    input, select, textarea { padding: 8px 10px; border-radius: 10px; border: 1.5px solid var(--text); background: rgba(255,255,255,0.2); color: var(--text); font-size: 13px; width: 100%; margin-bottom: 6px; }
-    textarea { resize: vertical; min-height: 60px; }
-    .result-box { background: rgba(91,14,138,0.08); border-radius: 10px; padding: 10px; margin-top: 4px; border: 1px solid var(--card-border); font-size: 12px; line-height: 1.4; }
-    .chat-container { display: flex; flex-direction: column; height: calc(100vh - 160px); }
-    .messages { flex: 1; overflow-y: auto; padding: 4px 0; display: flex; flex-direction: column; gap: 4px; }
-    .message { max-width: 88%; padding: 8px 10px; border-radius: 14px; font-size: 13px; line-height: 1.4; animation: fadeIn 0.3s ease; }
-    .message.user { align-self: flex-end; background: var(--text); color: var(--white); }
-    .message.bot { align-self: flex-start; background: var(--card); color: var(--text); border: 1px solid var(--card-border); }
-    .message-actions { display: flex; gap: 4px; margin-top: 4px; }
-    .msg-btn { font-size: 9px; padding: 3px 6px; border-radius: 4px; border: none; background: rgba(91,14,138,0.1); color: var(--text); cursor: pointer; }
-    .chat-input-area { display: flex; gap: 6px; padding: 6px 0; background: var(--bg-dark); }
-    .chat-input-area input { flex: 1; padding: 10px 14px; border-radius: 18px; border: 1.5px solid var(--text); background: rgba(255,255,255,0.15); color: var(--text); font-size: 13px; outline: none; margin-bottom: 0; }
-    .send-btn { width: 40px; height: 40px; border-radius: 50%; background: var(--text); border: none; font-size: 18px; cursor: pointer; color: var(--white); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .file-item { background: var(--card); border: 1px solid var(--card-border); border-radius: 10px; padding: 8px 10px; font-size: 12px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 3px; }
-    .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 9px; }
-    .badge-success { background: rgba(76,175,80,0.2); color: var(--success); }
-    .badge-danger { background: rgba(255,68,68,0.2); color: var(--danger); }
-    .badge-warning { background: rgba(255,193,7,0.2); color: var(--yellow); }
+    .page.active { display: block; animation: fadeIn 0.2s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
     .install-banner { background: rgba(91,14,138,0.15); border: 1.5px solid var(--text); border-radius: 12px; padding: 8px 12px; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
     .install-btn { background: var(--text); color: var(--white); border: none; padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 11px; cursor: pointer; }
+    .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 10px 8px; margin-bottom: 4px; cursor: pointer; transition: all 0.15s; }
+    .card:active { transform: scale(0.98); background: rgba(91,14,138,0.15); }
+    .card-title { font-size: 13px; font-weight: 600; color: var(--text); }
+    .card-desc { font-size: 10px; color: var(--text-light); margin-top: 1px; }
+    .section-title { font-size: 9px; font-weight: 700; color: var(--text); text-transform: uppercase; letter-spacing: 1px; margin: 8px 0 3px; }
+    .btn { padding: 8px; border-radius: 12px; background: var(--text); color: var(--white); border: none; font-weight: 700; font-size: 13px; cursor: pointer; width: 100%; }
+    .btn-sm { padding: 5px 8px; border-radius: 6px; background: var(--text); color: var(--white); border: none; font-weight: 600; cursor: pointer; font-size: 10px; }
+    .toast { position: fixed; bottom: 60px; left: 50%; transform: translateX(-50%); background: var(--text); color: var(--white); padding: 5px 12px; border-radius: 12px; font-size: 10px; z-index: 500; }
+    .hidden { display: none !important; }
+    .mt-1 { margin-top: 3px; }
+    .text-center { text-align: center; }
+    .text-light { color: var(--text-light); font-size: 10px; }
+    input, select, textarea { padding: 6px 8px; border-radius: 8px; border: 1.5px solid var(--text); background: rgba(255,255,255,0.2); color: var(--text); font-size: 12px; width: 100%; margin-bottom: 4px; }
+    textarea { resize: vertical; min-height: 60px; }
+    .result-box { background: rgba(91,14,138,0.08); border-radius: 8px; padding: 8px; margin-top: 3px; border: 1px solid var(--card-border); font-size: 11px; line-height: 1.3; }
+    .chat-container { display: flex; flex-direction: column; height: calc(100vh - 140px); }
+    .messages { flex: 1; overflow-y: auto; padding: 2px 0; display: flex; flex-direction: column; gap: 3px; }
+    .message { max-width: 88%; padding: 6px 8px; border-radius: 12px; font-size: 12px; line-height: 1.3; animation: fadeIn 0.3s ease; }
+    .message.user { align-self: flex-end; background: var(--text); color: var(--white); }
+    .message.bot { align-self: flex-start; background: var(--card); color: var(--text); border: 1px solid var(--card-border); }
+    .message-actions { display: flex; gap: 3px; margin-top: 3px; }
+    .msg-btn { font-size: 8px; padding: 2px 5px; border-radius: 3px; border: none; background: rgba(91,14,138,0.1); color: var(--text); cursor: pointer; }
+    .chat-input-area { display: flex; gap: 4px; padding: 4px 0; background: var(--bg-dark); }
+    .chat-input-area input { flex: 1; padding: 8px 10px; border-radius: 16px; border: 1.5px solid var(--text); background: rgba(255,255,255,0.15); color: var(--text); font-size: 12px; outline: none; margin-bottom: 0; }
+    .send-btn { width: 34px; height: 34px; border-radius: 50%; background: var(--text); border: none; font-size: 14px; cursor: pointer; color: var(--white); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .file-item { background: var(--card); border: 1px solid var(--card-border); border-radius: 8px; padding: 6px 8px; font-size: 11px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 2px; }
+    .badge { display: inline-block; padding: 1px 5px; border-radius: 4px; font-size: 8px; }
+    .badge-success { background: rgba(76,175,80,0.2); color: var(--success); }
+    .badge-danger { background: rgba(255,68,68,0.2); color: var(--danger); }
   </style>
 </head>
 <body>
@@ -94,12 +89,12 @@
   <div class="lock-icon">🔐</div>
   <h2>Консультант по ППС</h2>
   <input type="password" id="passwordInput" placeholder="Введите пароль" maxlength="20">
-  <button class="btn" id="passwordSubmit" style="max-width:280px;">Войти</button>
-  <div class="hint">Стандартный пароль: 1234</div>
+  <button class="btn" id="passwordSubmit" style="max-width:260px;">Войти</button>
+  <div class="text-light" style="font-size:10px;">Стандартный пароль: 1234</div>
 </div>
 <div class="toast hidden" id="toast"></div>
 
-<div class="app" id="appContainer">
+<div class="app">
   <div class="header">
     <div class="header-row">
       <div class="logo"><div class="icon-app">К</div><h1>Консультант по ППС</h1></div>
@@ -109,21 +104,20 @@
       </div>
     </div>
   </div>
-  <div id="reminderBannerContainer"></div>
 
   <div class="main" id="mainContent">
-    <!-- ГЛАВНАЯ / МЕНЮ -->
+    <!-- ГЛАВНАЯ -->
     <div class="page active" id="page-home">
-      <div class="install-banner hidden" id="installBanner">
-        <span style="font-size:11px;">📱 Установить приложение</span>
-        <button class="install-btn" id="installBtn">Установить</button>
+      <div class="install-banner" id="installBanner">
+        <span style="font-size:11px;">📱 Установить как приложение</span>
+        <button class="install-btn" id="installBtn">Как?</button>
       </div>
       <div class="section-title">💬 Главное</div>
       <div class="card" onclick="navigateTo('chat')"><div class="card-title">💬 Умный чат</div><div class="card-desc">Задайте вопрос — получу ответ из законов</div></div>
       <div class="card" onclick="navigateTo('analyzer')"><div class="card-title">🔍 Анализатор ПУ-6</div><div class="card-desc">Проверка стажа на ошибки и разрывы</div></div>
 
       <div class="section-title">📚 Законы и стаж</div>
-      <div class="card" onclick="navigateTo('laws')"><div class="card-title">📚 Законы</div><div class="card-desc">PDF, Word, поиск по тексту</div></div>
+      <div class="card" onclick="navigateTo('laws')"><div class="card-title">📚 Законы</div><div class="card-desc">PDF, Word, TXT — все форматы</div></div>
       <div class="card" onclick="navigateTo('international')"><div class="card-title">🌍 Международный стаж</div><div class="card-desc">Учёт стажа в других странах</div></div>
       <div class="card" onclick="navigateTo('timeline')"><div class="card-title">📅 График выхода</div><div class="card-desc">По году рождения — кто когда на пенсию</div></div>
 
@@ -140,84 +134,80 @@
       <button class="btn btn-sm mt-1" onclick="changePassword()">🔑 Сменить пароль</button>
     </div>
 
-    <!-- УМНЫЙ ЧАТ -->
+    <!-- ЧАТ -->
     <div class="page" id="page-chat">
       <div class="chat-container">
-        <div class="messages" id="messages"><div class="message bot">👋 Здравствуйте! Я умный консультант по пенсионному законодательству РБ.<br><br>Загрузите законы через главное меню и задайте вопрос — я проанализирую и дам понятный ответ.</div></div>
+        <div class="messages" id="messages"><div class="message bot">👋 Здравствуйте! Я умный консультант. Загрузите законы и задайте вопрос.</div></div>
         <div class="chat-input-area"><input type="text" id="chatInput" placeholder="Задайте вопрос..."><button class="send-btn" id="sendBtn">➤</button></div>
       </div>
     </div>
 
-    <!-- АНАЛИЗАТОР ПУ-6 -->
+    <!-- АНАЛИЗАТОР -->
     <div class="page" id="page-analyzer">
       <div class="section-title">🔍 Анализатор ПУ-6</div>
-      <div class="card"><div class="card-title">📸 Загрузить фото ПУ-6</div><div class="card-desc">Распознаю даты и проверю на ошибки</div></div>
+      <div class="card"><div class="card-title">📸 Загрузить фото ПУ-6</div></div>
       <input type="file" id="analyzerInput" accept="image/*" capture="environment" class="hidden">
       <button class="btn btn-sm mt-1" onclick="document.getElementById('analyzerInput').click()">📷 Сделать фото</button>
-      <div class="section-title">📝 Или введите даты вручную</div>
-      <select id="analyzerCategory"><option value="general">Обычный стаж</option><option value="teacher">Педработник</option><option value="medical">Медработник</option></select>
-      <textarea id="analyzerDates" placeholder="Периоды (каждый с новой строки):&#10;01.09.2015 — 31.08.2016&#10;15.09.2016 — 31.08.2017"></textarea>
+      <select id="analyzerCategory" class="mt-1"><option value="general">Обычный стаж</option><option value="teacher">Педработник</option><option value="medical">Медработник</option></select>
+      <textarea id="analyzerDates" placeholder="Периоды:&#10;01.09.2015 — 31.08.2016&#10;15.09.2016 — 31.08.2017"></textarea>
       <button class="btn btn-sm mt-1" onclick="runAnalyzer()">🔍 Проверить</button>
       <div id="analyzerResult" class="result-box hidden"></div>
     </div>
 
     <!-- ЗАКОНЫ -->
     <div class="page" id="page-laws">
-      <div class="section-title">📚 Загруженные документы</div>
+      <div class="section-title">📚 Документы</div>
       <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.txt" multiple style="display:none;">
       <button class="btn btn-sm" onclick="document.getElementById('fileInput').click()">📄 Загрузить PDF/Word/TXT</button>
-      <div id="fileList" style="margin-top:6px;"></div>
-      <div class="section-title">🔍 Поиск по тексту</div>
-      <input type="text" id="lawSearch" placeholder="Поиск по статьям..." oninput="searchLaws()">
+      <p class="text-light mt-1">Поддерживаются: PDF, DOC, DOCX, TXT (до 15 МБ)</p>
+      <div id="fileList" style="margin-top:4px;"></div>
+      <div class="section-title">🔍 Поиск</div>
+      <input type="text" id="lawSearch" placeholder="Поиск по тексту..." oninput="searchLaws()">
       <div id="lawSearchResults"></div>
     </div>
 
     <!-- МЕЖДУНАРОДНЫЙ -->
     <div class="page" id="page-international">
       <div class="section-title">🌍 Международный стаж</div>
-      <select id="country"><option value="">Выберите страну</option><option value="russia">🇷🇺 Россия (Союзное государство)</option><option value="kazakhstan">🇰🇿 Казахстан (ЕАЭС)</option><option value="armenia">🇦🇲 Армения (ЕАЭС)</option><option value="kyrgyzstan">🇰🇬 Кыргызстан (ЕАЭС)</option><option value="lithuania">🇱🇹 Литва (двусторонний)</option><option value="poland">🇵🇱 Польша (двусторонний)</option><option value="latvia">🇱🇻 Латвия (двусторонний)</option><option value="ukraine">🇺🇦 Украина (СНГ)</option></select>
-      <input type="number" id="intForeign" placeholder="Стаж в другой стране (лет)">
-      <input type="number" id="intBelarus" placeholder="Стаж в Беларуси (лет)">
-      <button class="btn btn-sm mt-1" onclick="calcInt()">🌍 Рассчитать общий стаж</button>
-      <div id="intResult" class="result-box hidden"></div>
+      <select id="country"><option value="">Страна</option><option value="russia">🇷🇺 Россия</option><option value="kazakhstan">🇰🇿 Казахстан</option><option value="armenia">🇦🇲 Армения</option><option value="kyrgyzstan">🇰🇬 Кыргызстан</option><option value="lithuania">🇱🇹 Литва</option><option value="poland">🇵🇱 Польша</option><option value="latvia">🇱🇻 Латвия</option><option value="ukraine">🇺🇦 Украина</option></select>
+      <input type="number" id="intForeign" placeholder="Стаж за границей (лет)"><input type="number" id="intBelarus" placeholder="Стаж в Беларуси (лет)">
+      <button class="btn btn-sm mt-1" onclick="calcInt()">Рассчитать</button><div id="intResult" class="result-box hidden"></div>
     </div>
 
     <!-- ГРАФИК -->
     <div class="page" id="page-timeline">
-      <div class="section-title">📅 График выхода на пенсию</div>
-      <input type="number" id="tlYear" placeholder="Год рождения (например: 1970)">
-      <button class="btn btn-sm mt-1" onclick="calcTimeline()">📅 Показать</button>
-      <div id="tlResult" class="result-box hidden"></div>
+      <div class="section-title">📅 График</div>
+      <input type="number" id="tlYear" placeholder="Год рождения">
+      <button class="btn btn-sm mt-1" onclick="calcTimeline()">Показать</button><div id="tlResult" class="result-box hidden"></div>
     </div>
 
     <!-- ДНЕВНИК -->
     <div class="page" id="page-journal">
       <div class="section-title">📊 Дневник</div>
-      <textarea id="jEntry" placeholder="Быстрая идея или заметка..."></textarea>
+      <textarea id="jEntry" placeholder="Заметка..."></textarea>
       <button class="btn btn-sm mt-1" onclick="addJournal()">➕ Сохранить</button>
-      <div id="journalList" style="margin-top:6px;"></div>
+      <div id="journalList" style="margin-top:4px;"></div>
     </div>
 
     <!-- НАПОМИНАНИЯ -->
     <div class="page" id="page-reminders">
       <div class="section-title">🔔 Напоминания</div>
-      <input type="text" id="remText" placeholder="Текст напоминания">
-      <input type="date" id="remDate">
+      <input type="text" id="remText" placeholder="Текст"><input type="date" id="remDate">
       <button class="btn btn-sm mt-1" onclick="addReminder()">➕ Добавить</button>
-      <div id="remindersList" style="margin-top:6px;"></div>
+      <div id="remindersList" style="margin-top:4px;"></div>
     </div>
 
     <!-- ИЗБРАННОЕ -->
     <div class="page" id="page-favorites">
       <div class="section-title">⭐ Избранное</div>
-      <div id="favoritesList"><p class="text-light text-center">Пока пусто. Добавляйте статьи из чата по ⭐</p></div>
+      <div id="favoritesList"><p class="text-light text-center">Пока пусто</p></div>
     </div>
 
     <!-- ИСТОРИЯ -->
     <div class="page" id="page-history">
-      <div class="section-title">📝 История диалогов</div>
+      <div class="section-title">📝 История</div>
       <div id="historyList"><p class="text-light text-center">Пока пусто</p></div>
-      <button class="btn btn-sm mt-1" onclick="clearHistory()" style="background:var(--danger);">🗑️ Очистить историю</button>
+      <button class="btn btn-sm mt-1" onclick="clearHistory()" style="background:var(--danger);">🗑️ Очистить</button>
     </div>
   </div>
 
@@ -231,41 +221,34 @@
 </div>
 
 <script>
-if ('serviceWorker' in navigator) { window.addEventListener('load', function() { navigator.serviceWorker.register("data:application/javascript," + encodeURIComponent("self.addEventListener('install',e=>{e.waitUntil(caches.open('c-new').then(c=>c.addAll(['/','/index.html'])));self.skipWaiting();});" + "self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).then(res=>{let rc=res.clone();caches.open('c-new').then(c=>c.put(e.request,rc));return res;}).catch(()=>caches.match('/index.html'))));});")).catch(()=>{}); }); }
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register("data:application/javascript," + encodeURIComponent(
+    "const C='c-v15';self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(['/','/index.html'])));self.skipWaiting();});" +
+    "self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==C).map(k=>caches.delete(k)))));clients.claim();});" +
+    "self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).then(res=>{let rc=res.clone();caches.open(C).then(c=>c.put(e.request,rc));return res;})));});"
+  ));
+}
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 
 <script>
-  // PWA
-  let deferredPrompt = null;
-  window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; document.getElementById('installBanner').classList.remove('hidden'); });
-  document.getElementById('installBtn').addEventListener('click', async () => { if (deferredPrompt) { deferredPrompt.prompt(); const r = await deferredPrompt.userChoice; if (r.outcome === 'accepted') document.getElementById('installBanner').classList.add('hidden'); deferredPrompt = null; } });
+  // Установочный баннер
+  document.getElementById('installBtn').addEventListener('click', () => {
+    alert('📱 Чтобы установить приложение:\n\n1. Нажмите ⋮ (три точки) в браузере\n2. Выберите "Добавить на главный экран"\n3. Или "Установить приложение"\n\nИконка 🟣К появится на рабочем столе!');
+  });
 
-  // Пароль
-  const PASSWORD_KEY = 'c_new_pwd'; let appPassword = localStorage.getItem(PASSWORD_KEY) || '1234';
+  const PASSWORD_KEY = 'c_v15_pwd'; let appPassword = localStorage.getItem(PASSWORD_KEY) || '1234';
   let isUnlocked = !localStorage.getItem(PASSWORD_KEY);
-  function checkPassword() { if (document.getElementById('passwordInput').value.trim() === appPassword) { isUnlocked = true; document.getElementById('passwordScreen').classList.add('hidden'); showReminderBanner(); } }
+  function checkPassword() { if (document.getElementById('passwordInput').value.trim() === appPassword) { isUnlocked = true; document.getElementById('passwordScreen').classList.add('hidden'); } }
   function lockApp() { isUnlocked = false; document.getElementById('passwordScreen').classList.remove('hidden'); }
   document.getElementById('passwordSubmit').addEventListener('click', checkPassword);
   document.getElementById('passwordInput').addEventListener('keydown', e => { if (e.key === 'Enter') checkPassword(); });
   document.getElementById('lockBtn').addEventListener('click', lockApp);
-  setTimeout(() => { document.getElementById('splash').classList.add('hidden'); if (!isUnlocked) document.getElementById('passwordScreen').classList.remove('hidden'); else showReminderBanner(); }, 1500);
-  function showToast(m) { const t = document.getElementById('toast'); t.textContent = m; t.classList.remove('hidden'); setTimeout(() => t.classList.add('hidden'), 1500); }
+  setTimeout(() => { document.getElementById('splash').classList.add('hidden'); document.getElementById('passwordScreen').classList.remove('hidden'); }, 1200);
+  function showToast(m) { const t = document.getElementById('toast'); t.textContent = m; t.classList.remove('hidden'); setTimeout(() => t.classList.add('hidden'), 1200); }
 
-  // Напоминание при входе
-  function showReminderBanner() {
-    const container = document.getElementById('reminderBannerContainer');
-    const reminders = appData.reminders || [];
-    const today = new Date().toISOString().slice(0,10);
-    const todayReminders = reminders.filter(r => r.date === today);
-    if (todayReminders.length > 0) {
-      container.innerHTML = todayReminders.map(r => `<div class="reminder-banner">🔔 ${r.text} <button class="reminder-close" onclick="this.parentElement.remove()">✕</button></div>`).join('');
-    } else { container.innerHTML = ''; }
-  }
-
-  // Навигация
   function navigateTo(p) {
     document.querySelectorAll('.page').forEach(x => x.classList.remove('active')); document.getElementById('page-' + p).classList.add('active');
     document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
@@ -278,29 +261,45 @@ if ('serviceWorker' in navigator) { window.addEventListener('load', function() {
   }
   document.querySelectorAll('.nav-item').forEach(b => b.addEventListener('click', () => navigateTo(b.dataset.page)));
 
-  // Тема
   let isDark = false;
   document.getElementById('themeToggle').addEventListener('click', () => { isDark = !isDark; const r = document.documentElement.style; if (isDark) { r.setProperty('--bg','#5B0E8A'); r.setProperty('--bg-dark','#3D0660'); r.setProperty('--text','#FF8C00'); } else { r.setProperty('--bg','#FF8C00'); r.setProperty('--bg-dark','#E07800'); r.setProperty('--text','#5B0E8A'); } });
 
-  // Данные
-  const STORAGE_KEY = 'c_new_data';
+  const STORAGE_KEY = 'c_v15_data';
   function loadData() { const r = localStorage.getItem(STORAGE_KEY); return r ? JSON.parse(r) : { files: [], articles: [], journal: [], reminders: [], favorites: [], chatHistory: [] }; }
   function saveData(d) { localStorage.setItem(STORAGE_KEY, JSON.stringify(d)); }
   let appData = loadData();
   function reindexArticles() { appData.articles = []; appData.files.forEach(f => { const ps = f.content.split(/\n{2,}/); ps.forEach(p => { const c = p.trim(); if (c.length > 50) appData.articles.push({ text: c, source: f.name }); }); }); }
 
-  // Загрузка файлов
+  // Загрузка файлов — ВСЕ форматы
   document.getElementById('fileInput').addEventListener('change', async (e) => {
     for (const file of Array.from(e.target.files)) {
-      if (file.size > 15*1024*1024) { showToast('Файл слишком большой'); continue; }
+      if (file.size > 15*1024*1024) { showToast('Файл слишком большой (макс. 15 МБ)'); continue; }
       try {
         let text = '';
-        if (file.name.endsWith('.pdf')) { const ab = await file.arrayBuffer(); const pdf = await pdfjsLib.getDocument({ data: ab }).promise; let ft = ''; for (let i=1;i<=pdf.numPages;i++) { const p = await pdf.getPage(i); const c = await p.getTextContent(); ft += c.items.map(it=>it.str).join(' ')+'\n\n'; } text = ft; }
-        else if (file.name.endsWith('.docx')||file.name.endsWith('.doc')) { const ab = await file.arrayBuffer(); const r = await mammoth.extractRawText({ arrayBuffer: ab }); text = r.value; }
-        else if (file.name.endsWith('.txt')) { text = await file.text(); }
-        else { showToast('Формат не поддерживается'); continue; }
-        appData.files.push({ name: file.name, size: file.size, content: text }); saveData(appData); reindexArticles(); showToast('✅ Загружен!');
-      } catch(err) { showToast('❌ Ошибка'); }
+        const name = file.name.toLowerCase();
+        if (name.endsWith('.pdf')) {
+          const ab = await file.arrayBuffer(); const pdf = await pdfjsLib.getDocument({ data: ab }).promise;
+          let ft = ''; for (let i=1;i<=pdf.numPages;i++) { const p = await pdf.getPage(i); const c = await p.getTextContent(); ft += c.items.map(it=>it.str).join(' ')+'\n\n'; }
+          text = ft;
+        } else if (name.endsWith('.docx')) {
+          const ab = await file.arrayBuffer(); const r = await mammoth.extractRawText({ arrayBuffer: ab }); text = r.value;
+        } else if (name.endsWith('.doc')) {
+          // Старый формат .doc — пробуем через mammoth (может не сработать для совсем старых)
+          try {
+            const ab = await file.arrayBuffer(); const r = await mammoth.extractRawText({ arrayBuffer: ab }); text = r.value;
+          } catch(e) {
+            // Если mammoth не справился — пробуем читать как текст
+            text = await file.text();
+          }
+        } else if (name.endsWith('.txt')) {
+          text = await file.text();
+        } else {
+          showToast('Формат не поддерживается: ' + file.name); continue;
+        }
+        if (!text.trim()) { showToast('Не удалось извлечь текст из: ' + file.name); continue; }
+        appData.files.push({ name: file.name, size: file.size, content: text });
+        saveData(appData); reindexArticles(); showToast('✅ ' + file.name);
+      } catch(err) { showToast('❌ Ошибка: ' + file.name); }
     }
     e.target.value = ''; renderFileList();
   });
@@ -309,26 +308,25 @@ if ('serviceWorker' in navigator) { window.addEventListener('load', function() {
   function deleteFile(i) { appData.files.splice(i,1); reindexArticles(); saveData(appData); renderFileList(); }
   function searchLaws() { const q = document.getElementById('lawSearch').value.toLowerCase().trim(); const l = document.getElementById('lawSearchResults'); if (!q) { l.innerHTML = ''; return; } const filtered = appData.articles.filter(a => a.text.toLowerCase().includes(q)).slice(0,10); l.innerHTML = filtered.length === 0 ? '<p class="text-light">Не найдено</p>' : filtered.map(a => `<div class="file-item"><span>📄 ${a.source}: ${a.text.substring(0,100)}...</span></div>`).join(''); }
 
-  // УМНЫЙ ЧАТ
+  // ЧАТ
   const messagesDiv = document.getElementById('messages'), chatInput = document.getElementById('chatInput');
   function addMessage(role, text) { const d = document.createElement('div'); d.className = 'message ' + role; d.innerHTML = text; messagesDiv.appendChild(d); messagesDiv.scrollTop = messagesDiv.scrollHeight; appData.chatHistory.push({ role, text, time: new Date().toISOString() }); saveData(appData); }
   function smartAnalyze(question) {
-    if (!appData.articles.length) return '⚠️ Сначала загрузите законы через главное меню (📚 Законы).';
+    if (!appData.articles.length) return '⚠️ Сначала загрузите законы (📚 Законы).';
     const q = question.toLowerCase(); const keywords = q.replace(/[?,.—]/g,'').split(/\s+/).filter(w=>w.length>2);
     let best = null, bestScore = 0;
-    appData.articles.forEach(a => { let score = 0; keywords.forEach(w => { const re = new RegExp(w,'gi'); const m = a.text.toLowerCase().match(re); if (m) score += m.length; }); if (/статья|право|пенси|стаж|доплат|досроч|ппс|профессиональн/i.test(a.text)) score += 3; if (score > bestScore) { bestScore = score; best = a; } });
-    if (!best) return '❓ В загруженных законах не найдено информации по вашему вопросу. Попробуйте переформулировать или загрузите нужный закон.';
+    appData.articles.forEach(a => { let score = 0; keywords.forEach(w => { const re = new RegExp(w,'gi'); const m = a.text.toLowerCase().match(re); if (m) score += m.length; }); if (/статья|право|пенси|стаж|доплат|досроч|ппс/i.test(a.text)) score += 3; if (score > bestScore) { bestScore = score; best = a; } });
+    if (!best) return '❓ В законах не найдено. Попробуйте переформулировать или загрузите нужный закон.';
     let response = '🧠 <b>Простыми словами:</b><br><br>';
-    if (q.includes('доплат')||q.includes('надбав')) response += 'Доплаты к пенсии назначаются при наличии особых условий: инвалидность, иждивенцы, возраст старше 80 лет. Размер зависит от категории.<br><br>';
-    else if (q.includes('стаж')||q.includes('выработ')) response += 'Для полной пенсии по возрасту нужен страховой стаж не менее 20 лет. Минимальный стаж для назначения — 15 лет. Если стаж меньше — пенсия будет ниже.<br><br>';
-    else if (q.includes('досроч')||q.includes('льгот')) response += 'Досрочная пенсия назначается при работе в особых условиях труда (Список №1, №2) или при длительной работе в определённых профессиях (педагоги, медики, лётный состав).<br><br>';
-    else if (q.includes('ппс')||q.includes('профессиональн')) response += 'Профессиональное пенсионное страхование (ППС) распространяется на работников с особыми условиями труда. Работодатель уплачивает взносы, из которых формируется пенсионное сбережение.<br><br>';
-    else response += 'По вашему вопросу найдена информация:<br><br>';
+    if (q.includes('доплат')||q.includes('надбав')) response += 'Доплаты назначаются при особых условиях: инвалидность, иждивенцы, возраст 80+.<br><br>';
+    else if (q.includes('стаж')) response += 'Для максимальной пенсии нужен стаж 20 лет. Минимальный — 15 лет.<br><br>';
+    else if (q.includes('досроч')||q.includes('льгот')) response += 'Досрочная пенсия — при работе в особых условиях (Список №1, №2).<br><br>';
+    else response += 'По вашему вопросу:<br><br>';
     response += '📚 <b>Источник:</b> ' + best.source + '<br>📄 «' + best.text.substring(0, 250) + '...»';
     response += '<div class="message-actions"><button class="msg-btn" onclick="copyMsg(this)">📋</button><button class="msg-btn" onclick="favMsg(this)">⭐</button></div>';
     return response;
   }
-  function sendMessage() { const t = chatInput.value.trim(); if (t) { addMessage('user', t); chatInput.value = ''; setTimeout(() => { const r = smartAnalyze(t); addMessage('bot', r); }, 700); } }
+  function sendMessage() { const t = chatInput.value.trim(); if (t) { addMessage('user', t); chatInput.value = ''; setTimeout(() => { addMessage('bot', smartAnalyze(t)); }, 700); } }
   document.getElementById('sendBtn').addEventListener('click', sendMessage);
   chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
   function copyMsg(btn) { const t = btn.parentElement.parentElement.textContent.replace('📋⭐','').trim(); navigator.clipboard.writeText(t).then(() => showToast('📋 Скопировано!')); }
@@ -337,83 +335,60 @@ if ('serviceWorker' in navigator) { window.addEventListener('load', function() {
   // АНАЛИЗАТОР
   document.getElementById('analyzerInput').addEventListener('change', async (e) => {
     const f = e.target.files[0]; if (!f) return;
-    const rd = document.getElementById('analyzerResult'); rd.classList.remove('hidden'); rd.textContent = '🔍 Распознаю даты...';
-    try { const w = await Tesseract.createWorker('rus+eng'); const { data } = await w.recognize(URL.createObjectURL(f)); await w.terminate(); document.getElementById('analyzerDates').value = data.text.trim(); rd.textContent = '✅ Даты распознаны! Нажмите «Проверить» для анализа.'; } catch(err) { rd.textContent = '❌ Ошибка распознавания. Введите даты вручную.'; }
+    const rd = document.getElementById('analyzerResult'); rd.classList.remove('hidden'); rd.textContent = '🔍 Распознаю...';
+    try { const w = await Tesseract.createWorker('rus+eng'); const { data } = await w.recognize(URL.createObjectURL(f)); await w.terminate(); document.getElementById('analyzerDates').value = data.text.trim(); rd.textContent = '✅ Распознано! Нажмите «Проверить».'; } catch(err) { rd.textContent = '❌ Ошибка. Введите даты вручную.'; }
   });
   function runAnalyzer() {
     const raw = document.getElementById('analyzerDates').value.trim(); const cat = document.getElementById('analyzerCategory').value;
     const r = document.getElementById('analyzerResult'); r.classList.remove('hidden');
-    if (!raw) { r.innerHTML = '⚠️ Введите даты периодов'; return; }
-    const lines = raw.split('\n').filter(l => l.includes('—') || l.includes('-'));
-    if (lines.length === 0) { r.innerHTML = '⚠️ Не найдено периодов. Формат: 01.09.2015 — 31.08.2016'; return; }
+    if (!raw) { r.innerHTML = '⚠️ Введите даты'; return; }
+    const lines = raw.split('\n').filter(l => l.includes('—')||l.includes('-'));
+    if (lines.length === 0) { r.innerHTML = '⚠️ Формат: 01.09.2015 — 31.08.2016'; return; }
     const periods = [];
     lines.forEach(l => { const parts = l.split(/[—\-]/); if (parts.length === 2) { const s = parseDate(parts[0].trim()), e = parseDate(parts[1].trim()); if (s && e) periods.push({ start: s, end: e, text: l.trim() }); } });
     if (periods.length === 0) { r.innerHTML = '⚠️ Не удалось разобрать даты'; return; }
     periods.sort((a,b) => a.start - b.start);
-    let html = '<b>📅 Найдено периодов:</b> ' + periods.length + '<br><br>';
+    let html = '<b>📅 Периодов:</b> ' + periods.length + '<br><br>';
     let issues = [];
     for (let i = 0; i < periods.length; i++) {
       const p = periods[i]; const days = Math.ceil((p.end - p.start)/(1000*60*60*24));
       html += `${i+1}. ${p.text} (${days} дн.)<br>`;
-      if (i > 0) { const gap = Math.ceil((p.start - periods[i-1].end)/(1000*60*60*24)) - 1; if (gap > 7) { html += `   ⚠️ Разрыв ${gap} дн. — уточните причину!<br>`; issues.push(`Разрыв ${gap} дн. между периодом ${i} и ${i+1}`); } }
-      if (cat === 'teacher') { const dow = p.start.getDay(); if (dow >= 4) { html += `   ⚠️ Начало в ${['вс','пн','вт','ср','чт','пт','сб'][dow]} — проверьте недельную норму!<br>`; issues.push(`Период ${i+1} начался в середине недели`); } }
+      if (i > 0) { const gap = Math.ceil((p.start - periods[i-1].end)/(1000*60*60*24)) - 1; if (gap > 7) { html += `   ⚠️ Разрыв ${gap} дн. — уточните!<br>`; issues.push(`Разрыв ${gap} дн.`); } }
+      if (cat === 'teacher') { const dow = p.start.getDay(); if (dow >= 4) { html += `   ⚠️ Начало в середине недели — проверьте норму!<br>`; } }
     }
     html += '<br><b>📋 Рекомендации:</b><br>';
-    if (issues.length === 0) html += '✅ Периоды выглядят корректно.<br>';
+    if (issues.length === 0) html += '✅ Периоды корректны.<br>';
     else issues.forEach(iss => html += `📞 ${iss}<br>`);
-    html += '<br>📝 <b>Что проверить:</b><br>📞 Позвонить в организацию по разрывам<br>📄 Проверить ПУ-3 за соответствующие годы';
     r.innerHTML = html;
   }
   function parseDate(str) { const parts = str.split('.'); if (parts.length === 3) { const d = new Date(parseInt(parts[2]), parseInt(parts[1])-1, parseInt(parts[0])); if (!isNaN(d)) return d; } return null; }
 
-  // МЕЖДУНАРОДНЫЙ
-  function calcInt() { const c = document.getElementById('country').value, f = parseInt(document.getElementById('intForeign').value)||0, b = parseInt(document.getElementById('intBelarus').value)||0; const r = document.getElementById('intResult'); r.classList.remove('hidden'); if (!c) { r.innerHTML = '⚠️ Выберите страну'; return; } const rules = { russia:'Союзное государство — полный зачёт', kazakhstan:'ЕАЭС — полный зачёт', armenia:'ЕАЭС — полный зачёт', kyrgyzstan:'ЕАЭС — полный зачёт', lithuania:'Двусторонний договор', poland:'Двусторонний договор', latvia:'Двусторонний договор', ukraine:'СНГ — при подтверждении' }; r.innerHTML = `<b>Общий стаж:</b> ${f+b} лет<br>📝 ${rules[c]||'Уточните в отделе ППС'}`; }
+  function calcInt() { const c = document.getElementById('country').value, f = parseInt(document.getElementById('intForeign').value)||0, b = parseInt(document.getElementById('intBelarus').value)||0; const r = document.getElementById('intResult'); r.classList.remove('hidden'); if (!c) { r.innerHTML = '⚠️ Выберите страну'; return; } const rules = { russia:'Союзное гос-во', kazakhstan:'ЕАЭС', armenia:'ЕАЭС', kyrgyzstan:'ЕАЭС', lithuania:'Двусторонний', poland:'Двусторонний', latvia:'Двусторонний', ukraine:'СНГ' }; r.innerHTML = `<b>${f+b} лет</b> (${rules[c]||''})`; }
+  function calcTimeline() { const y = parseInt(document.getElementById('tlYear').value); const r = document.getElementById('tlResult'); r.classList.remove('hidden'); if (!y||y<1940) { r.innerHTML = '⚠️ Введите год'; return; } r.innerHTML = `👨 М: <b>${y+63}</b> | 👩 Ж: <b>${y+58}</b><br>✈️ Лётный: <b>${y+50}/${y+45}</b><br>👩‍🏫 Пед: <b>${y+55}</b><br>🏥 Мед: <b>${y+55}</b><br>🏭 Список №1: <b>${y+50}/${y+45}</b><br>🏭 Список №2: <b>${y+55}/${y+50}</b>`; }
 
-  // ГРАФИК
-  function calcTimeline() { const year = parseInt(document.getElementById('tlYear').value); const r = document.getElementById('tlResult'); r.classList.remove('hidden'); if (!year || year < 1940) { r.innerHTML = '⚠️ Введите год рождения'; return; }
-    const retireGeneral = { male: year + 63, female: year + 58 };
-    let html = `<b>👤 Родившиеся в ${year} году:</b><br><br>`;
-    html += `👨 Мужчины: <b>${retireGeneral.male} год</b> (63 года)<br>`;
-    html += `👩 Женщины: <b>${retireGeneral.female} год</b> (58 лет)<br><br>`;
-    html += `<b>Досрочная пенсия по категориям:</b><br>`;
-    html += `✈️ Лётный состав: <b>${year+50}</b> (муж) / <b>${year+45}</b> (жен)<br>`;
-    html += `👩‍🏫 Педагоги: <b>${year+55}</b><br>`;
-    html += `🏥 Медики: <b>${year+55}</b><br>`;
-    html += `🏭 Список №1: <b>${year+50}</b> (муж) / <b>${year+45}</b> (жен)<br>`;
-    html += `🏭 Список №2: <b>${year+55}</b> (муж) / <b>${year+50}</b> (жен)<br>`;
-    html += `👶 Многодетные матери (5+): <b>${year+50}</b>`;
-    r.innerHTML = html;
-  }
-
-  // ДНЕВНИК
   function renderJournal() { const l = document.getElementById('journalList'); l.innerHTML = appData.journal.length === 0 ? '<p class="text-light">Нет записей</p>' : appData.journal.map((j,i) => `<div class="file-item"><span>📅 ${new Date(j.date).toLocaleString('ru-RU')}: ${j.text}</span><button class="msg-btn" onclick="deleteJournal(${i})">✕</button></div>`).join(''); }
-  function addJournal() { const t = document.getElementById('jEntry').value.trim(); if (t) { appData.journal.push({ text: t, date: new Date().toISOString() }); saveData(appData); renderJournal(); document.getElementById('jEntry').value = ''; showToast('✅ Сохранено!'); } }
+  function addJournal() { const t = document.getElementById('jEntry').value.trim(); if (t) { appData.journal.push({ text: t, date: new Date().toISOString() }); saveData(appData); renderJournal(); document.getElementById('jEntry').value = ''; showToast('✅'); } }
   function deleteJournal(i) { appData.journal.splice(i,1); saveData(appData); renderJournal(); }
 
-  // НАПОМИНАНИЯ
   function renderReminders() { const l = document.getElementById('remindersList'); l.innerHTML = appData.reminders.length === 0 ? '<p class="text-light">Нет напоминаний</p>' : appData.reminders.map((r,i) => `<div class="file-item"><span>🔔 ${r.text} — ${r.date}</span><button class="msg-btn" onclick="deleteReminder(${i})">✕</button></div>`).join(''); }
-  function addReminder() { const t = document.getElementById('remText').value.trim(), d = document.getElementById('remDate').value; if (t && d) { appData.reminders.push({ text: t, date: d }); saveData(appData); renderReminders(); document.getElementById('remText').value = ''; document.getElementById('remDate').value = ''; showToast('✅ Добавлено!'); } }
+  function addReminder() { const t = document.getElementById('remText').value.trim(), d = document.getElementById('remDate').value; if (t&&d) { appData.reminders.push({ text: t, date: d }); saveData(appData); renderReminders(); document.getElementById('remText').value=''; document.getElementById('remDate').value=''; showToast('✅'); } }
   function deleteReminder(i) { appData.reminders.splice(i,1); saveData(appData); renderReminders(); }
 
-  // ИЗБРАННОЕ
   function renderFavorites() { const l = document.getElementById('favoritesList'); l.innerHTML = appData.favorites.length === 0 ? '<p class="text-light text-center">Пока пусто</p>' : appData.favorites.map((f,i) => `<div class="file-item"><span>⭐ ${f.text.substring(0,100)}...</span><button class="msg-btn" onclick="deleteFav(${i})">✕</button></div>`).join(''); }
   function deleteFav(i) { appData.favorites.splice(i,1); saveData(appData); renderFavorites(); }
 
-  // ИСТОРИЯ
   function renderHistory() { const l = document.getElementById('historyList'); l.innerHTML = appData.chatHistory.length === 0 ? '<p class="text-light text-center">Пока пусто</p>' : appData.chatHistory.slice(-30).map(h => `<div class="file-item"><span>${h.role==='user'?'💬':'🤖'} ${h.text.substring(0,100)}...</span></div>`).join(''); }
-  function clearHistory() { if (confirm('Очистить историю диалогов?')) { appData.chatHistory = []; saveData(appData); renderHistory(); showToast('🗑️ Очищено'); } }
+  function clearHistory() { if (confirm('Очистить историю?')) { appData.chatHistory = []; saveData(appData); renderHistory(); showToast('🗑️'); } }
 
-  // Бэкап
-  document.getElementById('backupBtn').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(appData)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='backup_consult.json';a.click();showToast('💾 Сохранено!');});
+  function changePassword() { const old = prompt('Текущий пароль:'); if (old !== appPassword) { showToast('❌'); return; } const np = prompt('Новый пароль:'); if (np) { appPassword = np; localStorage.setItem(PASSWORD_KEY, np); showToast('✅'); } }
+
+  document.getElementById('backupBtn').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(appData)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='backup_consult.json';a.click();showToast('💾');});
   document.getElementById('restoreBtn').addEventListener('click',()=>document.getElementById('restoreInput').click());
-  document.getElementById('restoreInput').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{appData=JSON.parse(ev.target.result);reindexArticles();saveData(appData);showToast('📥 Восстановлено!');}catch(err){showToast('Ошибка');}};r.readAsText(f);});
-
-  // Настройки
-  function changePassword() { const old = prompt('Текущий пароль:'); if (old !== appPassword) { showToast('❌ Неверный'); return; } const np = prompt('Новый пароль:'); if (np) { appPassword = np; localStorage.setItem(PASSWORD_KEY, np); showToast('✅ Сменён!'); } }
+  document.getElementById('restoreInput').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{appData=JSON.parse(ev.target.result);reindexArticles();saveData(appData);showToast('📥');}catch(err){showToast('Ошибка');}};r.readAsText(f);});
 
   function init(){ reindexArticles(); renderFileList(); }
   init();
-  console.log('✅ НОВЫЙ Консультант по ППС — с чистого листа!');
+  console.log('✅ Консультант по ППС v15 — все форматы + установочный баннер!');
 </script>
 </body>
 </html>
